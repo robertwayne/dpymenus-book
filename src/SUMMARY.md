@@ -15,7 +15,6 @@
     - [Using a PaginatedMenu](./paginated_menus.md)
         - [Overriding Default Buttons](./overriding_defaults.md)
     - [Using a Poll](./polls.md)
-    - [Using a MultipleChoiceMenu](./multiple_choice.md)
 - [Configuring Your Menu](./local_configuration.md)
 - [Templates](./templates.md)
     - [Field Overrides](./field_overrides.md)
@@ -27,14 +26,15 @@
 
 # Configuration
 
-- [Using pyproject.toml to Configure Menus](./global_configuration.md)
+- [Using pyproject.toml](./global_configuration.md)
 - [Constant Variables](./constants.md)
 
 # Advanced Features
 
-- [Passing Dynamic Data Between Pages](./dynamic_data.md)
-- [Using Session Restoration Settings](./sessions.md)
-- [Event Hooks](./hooks.md)
+- [Passing Dynamic Data](./dynamic_data.md)
+- [Sessions](./sessions.md)
+- [Lifecycle](./lifecycle.md)
+    - [Hooks](./hooks.md)
 
 ---
 
