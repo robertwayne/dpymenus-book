@@ -1,0 +1,11 @@
+[book]
+authors = ["Rob Wagner <rob@robwagner.dev>"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Discord Menus"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "ayu"
+git-repository-url = 'https://github.com/robertwayne/dpymenus'
