@@ -19,3 +19,5 @@ git clone https://github.com/robertwayne/dpymenus-docs
     - Make sure your file adheres to a line-width of 120.
 
 3. Submit your PR! ✨
+
+*Please submit new issues over in the [dpymenus repository](https://github.com/robertwayne/dpymenus/issues/new).*
