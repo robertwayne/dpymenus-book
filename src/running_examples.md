@@ -31,9 +31,9 @@ In your command line:
     pip -m install poetry && poetry install
     ```
 
-   > Please note that this is not the preferred way to install `poetry`. Instead,
-   > you should follow the [guide](https://python-poetry.org/docs/) on their site.
-   > I highly recommend `poetry` as a package manager for Python, so it is not wasted
+   > Please note that this is not the preferred way to install Poetry. Instead,
+   > you should follow the [guide](https://python-poetry.org/docs/#installation) on their site.
+   > I highly recommend Poetry as a package manager for Python, so it is not wasted
    > effort to download and learn properly.
 
 5. Run the bot!

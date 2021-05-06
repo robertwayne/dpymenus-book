@@ -8,7 +8,7 @@ Installing `dpymenus` is very simple. First, ensure you are running Python 3.8 o
 > I try to work with modern versions of the language, so supporting versions far behind
 > would be a hindrance to myself and my enjoyment of programming.
 
-Second, make sure you are in your virtual environment *(if you are not using `poetry`)*. This trips up many newcomers to
+Second, make sure you are in your virtual environment *(if you are not using Poetry)*. This trips up many newcomers to
 the language, but it's a critical step.
 
 Last, run this in your command-line:
@@ -17,7 +17,7 @@ Last, run this in your command-line:
 pip install dpymenus && pip install -r requirements.txt
 ```
 
-If you use `poetry`:
+If you use Poetry
 
 ```
 poetry add dpymenus && poetry install

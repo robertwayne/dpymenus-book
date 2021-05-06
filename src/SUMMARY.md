@@ -38,4 +38,5 @@
 
 ---
 
+[Contributing](./contributing.md)
 [Other Projects](./projects.md)
