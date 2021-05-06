@@ -17,13 +17,19 @@ The overall scope for the project is as follows:
 
 This library is built against a minimum version of Python 3.8.
 
-`dpymenus` uses the [Poetry] package manager to manage dependencies and builds. Make sure you have Poetry installed via
-the [official installation instructions](https://python-poetry.org/docs/#installation).
+`dpymenus` uses the [Poetry](https://python-poetry.org/) package manager to manage dependencies and builds. Make sure
+you have Poetry installed via the [official installation instructions](https://python-poetry.org/docs/#installation).
 
 1. Clone the repository and checkout the `next` branch:
 
    ```
-   git clone https://github.com/robertwayne/dpymenus && cd dpymenus && git checkout next
+   git clone https://github.com/robertwayne/dpymenus
+   ```
+   ```
+   cd dpymenus
+   ```
+   ```
+   git checkout next
    ```
 
 2. (Optional) Set up the example runner, so you can test your changes live. Create a `.env` file:
