@@ -140,13 +140,15 @@
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                         
+                        
+
                     </div>
                 </div>
 
                 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -178,16 +180,16 @@ would be a hindrance to myself and my enjoyment of programming.</p>
 <p>Second, make sure you are in your virtual environment <em>(if you are not using Poetry)</em>. This trips up many newcomers to
 the language, but it's a critical step.</p>
 <p>Last, run this in your command-line:</p>
-<pre><code>pip install dpymenus &amp;&amp; pip install -r requirements.txt
+<pre><code>pip install dpymenus
 </code></pre>
 <p>If you use Poetry</p>
-<pre><code>poetry add dpymenus &amp;&amp; poetry install
+<pre><code>poetry add dpymenus
 </code></pre>
 <h2 id="development-branch"><a class="header" href="#development-branch">Development Branch</a></h2>
 <p>If you are interested in using the development branch, you can run:</p>
-<pre><code>pip install git+https://github.com/robertwayne/dpymenus.git@next &amp;&amp; pip install -r requirements.txt
+<pre><code>pip install git+https://github.com/robertwayne/dpymenus.git@next
 </code></pre>
-<pre><code>poetry add git+https://github.com/robertwayne/dpymenus.git#next &amp;&amp; poetry install
+<pre><code>poetry add git+https://github.com/robertwayne/dpymenus.git#next
 </code></pre>
 <p>Please note that there are no stability or documentation guarantees for this branch. It is <strong>NOT</strong> recommended using the
 development branch unless you know what you are doing.</p>

@@ -142,13 +142,15 @@
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                         
+                        
+
                     </div>
                 </div>
 
                 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -182,7 +184,7 @@ their bots easily.</p>
 </ul>
 <p>This book will provide complete coverage of the libraries functions, how to use them, and exists alongside a full set of
 runnable examples, so you can see every feature!</p>
-<h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
 <p>Installing <code>dpymenus</code> is very simple. First, ensure you are running Python 3.8 or higher.</p>
 <blockquote>
 <p><strong>Version Support</strong></p>
@@ -193,20 +195,20 @@ would be a hindrance to myself and my enjoyment of programming.</p>
 <p>Second, make sure you are in your virtual environment <em>(if you are not using Poetry)</em>. This trips up many newcomers to
 the language, but it's a critical step.</p>
 <p>Last, run this in your command-line:</p>
-<pre><code>pip install dpymenus &amp;&amp; pip install -r requirements.txt
+<pre><code>pip install dpymenus
 </code></pre>
 <p>If you use Poetry</p>
-<pre><code>poetry add dpymenus &amp;&amp; poetry install
+<pre><code>poetry add dpymenus
 </code></pre>
 <h2 id="development-branch"><a class="header" href="#development-branch">Development Branch</a></h2>
 <p>If you are interested in using the development branch, you can run:</p>
-<pre><code>pip install git+https://github.com/robertwayne/dpymenus.git@next &amp;&amp; pip install -r requirements.txt
+<pre><code>pip install git+https://github.com/robertwayne/dpymenus.git@next
 </code></pre>
-<pre><code>poetry add git+https://github.com/robertwayne/dpymenus.git#next &amp;&amp; poetry install
+<pre><code>poetry add git+https://github.com/robertwayne/dpymenus.git#next
 </code></pre>
 <p>Please note that there are no stability or documentation guarantees for this branch. It is <strong>NOT</strong> recommended using the
 development branch unless you know what you are doing.</p>
-<h1 id="running-examples"><a class="header" href="#running-examples">Running Examples</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="running-examples"><a class="header" href="#running-examples">Running Examples</a></h1>
 <p><code>dpymenus</code> contains a working example for almost every feature most developers will be using. All the examples run as
 separate cogs on a bot that you can load up yourself.</p>
 <p>All of these instructions should work on Linux (Ubuntu-flavors) &amp; Windows 10.</p>
@@ -251,8 +253,8 @@ effort to download and learn properly.</p>
 <p>At this point, the bot should be up and running. All the cogs are loaded automatically thanks
 to <a href="&#x27;https://github.com/robertwayne/cogwatch">cogwatch</a>, so you can add the bot to your server and start using commands.
 The next page will list all the available commands and what they do.</p>
-<h1 id="migrating-from-v1"><a class="header" href="#migrating-from-v1">Migrating from v1</a></h1>
-<h1 id="text-based-menus"><a class="header" href="#text-based-menus">Text-Based Menus</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="migrating-from-v1"><a class="header" href="#migrating-from-v1">Migrating from v1</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="text-based-menus"><a class="header" href="#text-based-menus">Text-Based Menus</a></h1>
 <p>Text-based menus are useful when you need a way to parse user text, or just as a means to limit your requests against
 the Discord API <em>(button-based menus have inherent overhead because of this)</em>.</p>
 <p>Let's look at the official <code>text_menu_example.py</code>.</p>
@@ -330,16 +332,16 @@ types a 'y' in chat, this will return true and proceed to the next line.</p>
 <p><code>next</code> is a method available on all menu types which simply proceeds to the next available page.</p>
 <p>When the menu updates, it will always check if the current page has a callback. Because our second page did not define
 one, an internal method will run that closes our menu and ends the user-menu session.</p>
-<h1 id="button-based-menus"><a class="header" href="#button-based-menus">Button-Based Menus</a></h1>
-<h1 id="using-a-paginatedmenu"><a class="header" href="#using-a-paginatedmenu">Using a PaginatedMenu</a></h1>
-<h1 id="overriding-default-buttons"><a class="header" href="#overriding-default-buttons">Overriding Default Buttons</a></h1>
-<h1 id="using-a-poll"><a class="header" href="#using-a-poll">Using a Poll</a></h1>
-<h1 id="configuring-your-menu"><a class="header" href="#configuring-your-menu">Configuring Your Menu</a></h1>
-<h1 id="templates"><a class="header" href="#templates">Templates</a></h1>
-<h1 id="field-overrides"><a class="header" href="#field-overrides">Field Overrides</a></h1>
-<h1 id="creating-pages"><a class="header" href="#creating-pages">Creating Pages</a></h1>
-<h1 id="defining-callback-events"><a class="header" href="#defining-callback-events">Defining Callback Events</a></h1>
-<h1 id="using-pyprojecttoml-to-configure-menus"><a class="header" href="#using-pyprojecttoml-to-configure-menus">Using pyproject.toml to Configure Menus</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="button-based-menus"><a class="header" href="#button-based-menus">Button-Based Menus</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="using-a-paginatedmenu"><a class="header" href="#using-a-paginatedmenu">Using a PaginatedMenu</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="overriding-default-buttons"><a class="header" href="#overriding-default-buttons">Overriding Default Buttons</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="using-a-poll"><a class="header" href="#using-a-poll">Using a Poll</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="configuring-your-menu"><a class="header" href="#configuring-your-menu">Configuring Your Menu</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="templates"><a class="header" href="#templates">Templates</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="field-overrides"><a class="header" href="#field-overrides">Field Overrides</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="creating-pages"><a class="header" href="#creating-pages">Creating Pages</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="defining-callback-events"><a class="header" href="#defining-callback-events">Defining Callback Events</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="using-pyprojecttoml-to-configure-menus"><a class="header" href="#using-pyprojecttoml-to-configure-menus">Using pyproject.toml to Configure Menus</a></h1>
 <p>General global settings within the library can be configured with a <code>pyproject.toml</code> file in your root directory.</p>
 <p>Everything should be listed under a <code>[dpymenus]</code> header.</p>
 <h3 id="general"><a class="header" href="#general">General</a></h3>
@@ -383,10 +385,10 @@ constants-buttons = ['⏮️', '⬅️️', '🛑', '➡️️', '⏭️']
 </code></pre>
 <pre><code>[dpymenus]
 </code></pre>
-<h1 id="constant-variables"><a class="header" href="#constant-variables">Constant Variables</a></h1>
-<h1 id="passing-dynamic-data-between-pages"><a class="header" href="#passing-dynamic-data-between-pages">Passing Dynamic Data Between Pages</a></h1>
-<h1 id="using-session-restoration-settings"><a class="header" href="#using-session-restoration-settings">Using Session Restoration Settings</a></h1>
-<h1 id="lifecycle"><a class="header" href="#lifecycle">Lifecycle</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="constant-variables"><a class="header" href="#constant-variables">Constant Variables</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="passing-dynamic-data-between-pages"><a class="header" href="#passing-dynamic-data-between-pages">Passing Dynamic Data Between Pages</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="using-session-restoration-settings"><a class="header" href="#using-session-restoration-settings">Using Session Restoration Settings</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="lifecycle"><a class="header" href="#lifecycle">Lifecycle</a></h1>
 <p>Menus consist of three basic stages: open, update, and close. Most of the time is spent in the update stage, which 
 processes user input, handles transitions, and manages any state data. In general, you don't really need to know 
 anything about menu state management unless you are using hooks <em>(in the next chapter)</em> or overriding the <code>BaseMenu</code> 
@@ -424,7 +426,7 @@ menu, but generally look as follows:</p>
 <li>Deletes the Discord message</li>
 <li>Executes any post-close hooks</li>
 </ol>
-<h1 id="event-hooks"><a class="header" href="#event-hooks">Event Hooks</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="event-hooks"><a class="header" href="#event-hooks">Event Hooks</a></h1>
 <p>The library offers extensive hook capabilities for all stages of a menus' lifecycle. Let's look at the official
 <code>menu_hooks_example.py</code>. In particular, we will zoom in on the method adding our hooks.</p>
 <pre><code class="language-python">from dpymenus import hooks
@@ -456,7 +458,7 @@ event.</p>
 event is explicitly listed where its hook will be executed in the call stack. Timeouts are a special case, however. 
 This event is called when with a user-defined timeout expires, resulting in the menu closing out.</p>
 <p><em>There are currently no hooks for user cancels, failures, and session state changes.</em></p>
-<h1 id="contributing"><a class="header" href="#contributing">Contributing</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="contributing"><a class="header" href="#contributing">Contributing</a></h1>
 <p>I am open to all contributions, so long as it fits within the scope of the library. Large or breaking changes should be
 discussed via issue before submitting a PR, but smaller changes can be submitted directly for review.</p>
 <h2 id="scope"><a class="header" href="#scope">Scope</a></h2>
@@ -525,7 +527,7 @@ automatically be formatted on submission via GitHub actions, but you can run <co
 </ul>
 <h2 id="license"><a class="header" href="#license">License</a></h2>
 <p>By contributing, you agree that your contributions will be licensed under the MIT License.</p>
-<h1 id="other-projects"><a class="header" href="#other-projects">Other Projects</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="other-projects"><a class="header" href="#other-projects">Other Projects</a></h1>
 <p>If you enjoy using <code>dpymenus</code>, you may like another library of mine called
 <a href="https://github.com/robertwayne/cogwatch">cogwatch</a>. Cogwatch adds automatic hot-reloading to your command files, so you
 never have to call a custom reload function again <em>(mostly)</em>!</p>
