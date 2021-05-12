@@ -14,13 +14,13 @@ the language, but it's a critical step.
 Last, run this in your command-line:
 
 ```
-pip install dpymenus && pip install -r requirements.txt
+pip install dpymenus
 ```
 
 If you use Poetry
 
 ```
-poetry add dpymenus && poetry install
+poetry add dpymenus
 ```
 
 ## Development Branch
@@ -28,11 +28,11 @@ poetry add dpymenus && poetry install
 If you are interested in using the development branch, you can run:
 
 ```
-pip install git+https://github.com/robertwayne/dpymenus.git@next && pip install -r requirements.txt
+pip install git+https://github.com/robertwayne/dpymenus.git@next
 ```
 
 ```
-poetry add git+https://github.com/robertwayne/dpymenus.git#next && poetry install
+poetry add git+https://github.com/robertwayne/dpymenus.git#next
 ```
 
 Please note that there are no stability or documentation guarantees for this branch. It is **NOT** recommended using the
