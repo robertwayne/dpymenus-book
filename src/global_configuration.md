@@ -11,7 +11,8 @@ Everything should be listed under a `[dpymenus]` header.
 | history-cache-limit | int | 10 | Limit on the history cache. 0 disables. |
 | hide-warnings | bool | False | Shows/hides library warnings in the console. |
 | reply-as-default | bool | True | Enables/disables the Discord reply feature. |
-| button-delay | float | 0.35 | Delay between adding buttons to a page. |
+| button-delay | float | 0.35 | Delay, in milliseconds, between adding buttons to a page. |
+| timeout | int | 120 | Duration, in seconds, before a menu is timed out and closed. |
 
 ### Sessions
 
@@ -21,7 +22,7 @@ Everything should be listed under a `[dpymenus]` header.
 | sessions-per-channel | int | 1 | Limits sessions per channel. |
 | sessions-per-guild | int | 3 | Limits sessions per guild. |
 | sessions-per-user | int | 10 | Limits sessions per user. |
-| session-timeout | int | 3600 | Time before sessions are removed from the store. |
+| session-timeout | int | 3600 | Duration, in seconds, before sessions are removed from the store. |
 
 ### Constants
 
@@ -47,6 +48,7 @@ allow-session-restore = false
 hide-warnings = false
 reply-as-default = false
 button-delay = 0.35
+timeout = 15
 constants-confirm = ['yes', 'y']
 constants-deny = ['no', 'n']
 constants-quit = ['quit', 'q']
