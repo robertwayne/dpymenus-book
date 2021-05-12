@@ -10,7 +10,7 @@ Everything should be listed under a `[dpymenus]` header.
 | -------- | ----------- | ---------- | ------- |
 | history-cache-limit | int | 10 | Limit on the history cache. 0 disables. |
 | hide-warnings | bool | False | Shows/hides library warnings in the console. |
-| reply-as-default | bool | True | Enables/disables the Discord reply feature. |
+| reply-as-default | bool | False | Enables/disables the Discord reply feature. |
 | button-delay | float | 0.35 | Delay, in milliseconds, between adding buttons to a page. |
 | timeout | int | 120 | Duration, in seconds, before a menu is timed out and closed. |
 
