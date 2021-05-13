@@ -4,7 +4,7 @@ General global settings within the library can be configured with a `pyproject.t
 
 Everything should be listed under a `[dpymenus]` header.
 
-### General
+## General
 
 | Variable | Type | Default | Description |
 | -------- | ----------- | ---------- | ------- |
@@ -14,7 +14,7 @@ Everything should be listed under a `[dpymenus]` header.
 | button-delay | float | 0.35 | Delay, in milliseconds, between adding buttons to a page. |
 | timeout | int | 120 | Duration, in seconds, before a menu is timed out and closed. |
 
-### Sessions
+## Sessions
 
 | Variable | Type | Default | Description |
 | -------- | ----------- | ---------- | ------- |
@@ -24,7 +24,7 @@ Everything should be listed under a `[dpymenus]` header.
 | sessions-per-user | int | 10 | Limits sessions per user. |
 | session-timeout | int | 3600 | Duration, in seconds, before sessions are removed from the store. |
 
-### Constants
+## Constants
 
 | Variable | Type | Default |
 | -------- | ----------- | ---------- |
@@ -35,7 +35,7 @@ Everything should be listed under a `[dpymenus]` header.
 
 *See the [next page](./constants.md) for detailed information on constants.*
 
-### Example File
+## Example File
 
 ```toml
 [dpymenus]
@@ -53,8 +53,4 @@ constants-confirm = ['yes', 'y']
 constants-deny = ['no', 'n']
 constants-quit = ['quit', 'q']
 constants-buttons = ['⏮️', '⬅️️', '🛑', '➡️️', '⏭️'] 
-```
-
-```
-[dpymenus]
 ```

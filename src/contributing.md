@@ -22,19 +22,21 @@ you have Poetry installed via the [official installation instructions](https://p
 
 1. Clone the repository and checkout the `next` branch:
 
-   ```
+   ```shell
    git clone https://github.com/robertwayne/dpymenus
    ```
-   ```
+
+   ```shell
    cd dpymenus
    ```
-   ```
+
+   ```shell
    git checkout next
    ```
 
 2. (Optional) Set up the example runner, so you can test your changes live. Create a `.env` file:
 
-    ```
+    ```shell
     echo "BOT_TOKEN=your_private_token_here" > .env
     ```
 
@@ -43,16 +45,15 @@ you have Poetry installed via the [official installation instructions](https://p
    bot page. If you are unsure what to use, please see the
    [discord.py guide](https://discordpy.readthedocs.io/en/stable/discord.html).*
 
-
 3. Install the dependencies:
 
-    ```
+    ```shell
     poetry install
     ```
 
 4. (Optional) Test that the runner is working with:
 
-    ```
+    ```shell
     poetry run examples
     ```
 
@@ -74,7 +75,7 @@ automatically be formatted on submission via GitHub actions, but you can run `po
 - Break up dense chunks of code where it makes sense (if/else try/catch, returns).
 - Ensure docstrings follow existing docstring structure.
 - All library code should be type annotated. Examples should not.
-    - See the `dpymenus/types/__init__.py` file for existing built-in library types.
+  - See the `dpymenus/types/__init__.py` file for existing built-in library types.
 
 ## License
 
