@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Constant Variables - Discord Menus</title>
+        <title>Sessions - Discord Menus</title>
         
         
 
@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Getting Started</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="running_examples.html"><strong aria-hidden="true">2.</strong> Running Examples</a></li><li class="chapter-item expanded affix "><li class="part-title">Building Menus</li><li class="chapter-item expanded "><a href="text_menus.html"><strong aria-hidden="true">3.</strong> Text-Based Menus</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Button-Based Menus</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> Using a PaginatedMenu</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.1.</strong> Overriding Default Buttons</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> Using a Poll</div></li></ol></li><li class="chapter-item expanded "><a href="local_configuration.html"><strong aria-hidden="true">5.</strong> Configuring Your Menu</a></li><li class="chapter-item expanded "><a href="templates.html"><strong aria-hidden="true">6.</strong> Templates</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="field_overrides.html"><strong aria-hidden="true">6.1.</strong> Field Overrides</a></li></ol></li><li class="chapter-item expanded "><a href="pages.html"><strong aria-hidden="true">7.</strong> Creating Pages</a></li><li class="chapter-item expanded affix "><li class="part-title">Configuration</li><li class="chapter-item expanded "><a href="global_configuration.html"><strong aria-hidden="true">8.</strong> Using pyproject.toml</a></li><li class="chapter-item expanded "><a href="constants.html" class="active"><strong aria-hidden="true">9.</strong> Constant Variables</a></li><li class="chapter-item expanded affix "><li class="part-title">Advanced Features</li><li class="chapter-item expanded "><a href="dynamic_data.html"><strong aria-hidden="true">10.</strong> Passing Dynamic Data</a></li><li class="chapter-item expanded "><a href="sessions.html"><strong aria-hidden="true">11.</strong> Sessions</a></li><li class="chapter-item expanded "><a href="lifecycle.html"><strong aria-hidden="true">12.</strong> Lifecycle</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hooks.html"><strong aria-hidden="true">12.1.</strong> Hooks</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="contributing.html">Contributing</a></li><li class="chapter-item expanded affix "><a href="projects.html">Other Projects</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Getting Started</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="running_examples.html"><strong aria-hidden="true">2.</strong> Running Examples</a></li><li class="chapter-item expanded affix "><li class="part-title">Building Menus</li><li class="chapter-item expanded "><a href="text_menus.html"><strong aria-hidden="true">3.</strong> Text-Based Menus</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Button-Based Menus</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> Using a PaginatedMenu</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.1.</strong> Overriding Default Buttons</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> Using a Poll</div></li></ol></li><li class="chapter-item expanded "><a href="local_configuration.html"><strong aria-hidden="true">5.</strong> Configuring Your Menu</a></li><li class="chapter-item expanded "><a href="templates.html"><strong aria-hidden="true">6.</strong> Templates</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="field_overrides.html"><strong aria-hidden="true">6.1.</strong> Field Overrides</a></li></ol></li><li class="chapter-item expanded "><a href="pages.html"><strong aria-hidden="true">7.</strong> Creating Pages</a></li><li class="chapter-item expanded affix "><li class="part-title">Configuration</li><li class="chapter-item expanded "><a href="global_configuration.html"><strong aria-hidden="true">8.</strong> Using pyproject.toml</a></li><li class="chapter-item expanded "><a href="constants.html"><strong aria-hidden="true">9.</strong> Constant Variables</a></li><li class="chapter-item expanded affix "><li class="part-title">Advanced Features</li><li class="chapter-item expanded "><a href="dynamic_data.html"><strong aria-hidden="true">10.</strong> Passing Dynamic Data</a></li><li class="chapter-item expanded "><a href="sessions.html" class="active"><strong aria-hidden="true">11.</strong> Sessions</a></li><li class="chapter-item expanded "><a href="lifecycle.html"><strong aria-hidden="true">12.</strong> Lifecycle</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hooks.html"><strong aria-hidden="true">12.1.</strong> Hooks</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="contributing.html">Contributing</a></li><li class="chapter-item expanded affix "><a href="projects.html">Other Projects</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -169,38 +169,39 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="constant-variables"><a class="header" href="#constant-variables">Constant Variables</a></h1>
-<p>The library comes with several pre-defined variables in the constants import to make working with menus a bit more seamless. While I try to provide sane defaults,
-each of the options can be overriden.</p>
-<p>As you saw on the <a href="./global_configuration.html">previous page</a>, they are simply lists of strings.</p>
-<h2 id="text-constants"><a class="header" href="#text-constants">Text Constants</a></h2>
-<pre><code class="language-python">from dpymenus.constants import CONFIRM, DENY, QUIT
-</code></pre>
-<p>When creating text-based menus that require users to enter responses, you'll often
-need to check for values such as 'yes', 'no', and 'quit'. By default, text-based menus all use the QUIT constants internally to allow users to close out of menus.</p>
-<h2 id="button-constants"><a class="header" href="#button-constants">Button Constants</a></h2>
-<pre><code class="language-python">from dpymenus.constants import GENERIC_BUTTONS
-</code></pre>
-<p>In general, you shouldn't have to import these directly and they should be overriden using the <code>pyproject.toml</code> file. This is used internally for the
-PaginatedMenu to display its reaction buttons.</p>
-<p>When overriding this value, make sure you place your buttons in the order they
-will be displayed on the PaginatedMenu:</p>
-<pre><code>first_page, back, close, next, last_page
-</code></pre>
-<p>Also, note that PagiantedMenu provides a general method for managing this: <code>add_buttons([...])</code>. You should prefer to use this method unless you have multiple menus which should have their default buttons overridden.</p>
+                        <h1 id="using-session-restoration-settings"><a class="header" href="#using-session-restoration-settings">Using Session Restoration Settings</a></h1>
+<h2 id="work-in-progress----feature-incomplete"><a class="header" href="#work-in-progress----feature-incomplete">Work In Progress -- Feature Incomplete</a></h2>
+<p>Sessions are, basically, a menu instance. Sessions internally are actually IDs linked to a specific menu instance, but on the developer end you likely don't need to know that.</p>
+<p>Sessions allow you to control how many menus a single user can open at once before they start closing themselves.</p>
+<blockquote>
+<p><strong>Previous Versions</strong></p>
+<p>If you used dpymenus prior to v2, you would be familiar with menus not
+opening at all when you reached a limit. This will never happen now. There
+was also the method <code>.allow_multisessions()</code>, which would let you open up
+multiple menus per user. This is now default functionality, configured via
+settings.</p>
+</blockquote>
+<h2 id="keeping-multiple-menus-alive"><a class="header" href="#keeping-multiple-menus-alive">Keeping Multiple Menus Alive</a></h2>
+<p>All menus open concurrently and run alongside eachother. This setting is controlled with the <code>sessions-per-user</code> value as an upper limit on menus a single user can have open. By default, 10 menus can be opened at once.</p>
+<p>If this value is reached, say 11 menus are opened by a single user without being closed, the earliest menu will close automatically.</p>
+<p>In general, you should think about how many menus your users realistically need open at once and adjust accordingly. This is intended to prevent too many menus existing and eating up system resources.</p>
+<h2 id="managing-session-limits"><a class="header" href="#managing-session-limits">Managing Session Limits</a></h2>
+<h3 id="per-user"><a class="header" href="#per-user">Per User</a></h3>
+<h3 id="per-channel"><a class="header" href="#per-channel">Per Channel</a></h3>
+<h3 id="per-guild"><a class="header" href="#per-guild">Per Guild</a></h3>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="global_configuration.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="dynamic_data.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="dynamic_data.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="lifecycle.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -212,13 +213,13 @@ will be displayed on the PaginatedMenu:</p>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="global_configuration.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="dynamic_data.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="dynamic_data.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="lifecycle.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
