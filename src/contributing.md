@@ -17,8 +17,8 @@ The overall scope for the project is as follows:
 
 This library is built against a minimum version of Python 3.8.
 
-`dpymenus` uses the [Poetry](https://python-poetry.org/) package manager to manage dependencies and builds. Make sure
-you have Poetry installed via the [official installation instructions](https://python-poetry.org/docs/#installation).
+`dpymenus` uses the **[Poetry](https://python-poetry.org/)** package manager to manage dependencies and builds. Make sure
+you have Poetry installed via the **[official installation instructions](https://python-poetry.org/docs/#installation)**.
 
 1. Clone the repository and checkout the `next` branch:
 
@@ -41,9 +41,9 @@ you have Poetry installed via the [official installation instructions](https://p
     ```
 
    *Note: Replace the `your_private_token_here` text with the token from your
-   [Discord Developers](https://discord.com/developers/applications)
+   **[Discord Developers](https://discord.com/developers/applications)**
    bot page. If you are unsure what to use, please see the
-   [discord.py guide](https://discordpy.readthedocs.io/en/stable/discord.html).*
+   **[discord.py guide](https://discordpy.readthedocs.io/en/stable/discord.html)**.*
 
 3. Install the dependencies:
 
@@ -68,7 +68,7 @@ you have Poetry installed via the [official installation instructions](https://p
 
 ## Coding Style
 
-`dpymenus` uses a built-in [black](https://github.com/psf/black) configuration to handle formatting. Your code will
+`dpymenus` uses a built-in **[black](https://github.com/psf/black)** configuration to handle formatting. Your code will
 automatically be formatted on submission via GitHub actions, but you can run `poetry run fmt` to manually format it.
 
 - Follow PEP8 naming conventions.

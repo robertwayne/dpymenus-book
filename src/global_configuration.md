@@ -33,7 +33,7 @@ Everything should be listed under a `[dpymenus]` header.
 | constants-quit' | List[str] | ['e', 'exit', 'q', 'quit', 'stop', 'x', 'cancel', 'c'] |
 | constants-buttons | List[str] | ['⏮️', '◀️', '⏹️', '▶️', '⏭️'] |
 
-*See the [next page](./constants.md) for detailed information on constants.*
+*See the **[next page](./constants.md) **for detailed information on constants.*
 
 ## Example File
 

@@ -27,7 +27,7 @@ The template takes a variety of keyword arguments:
 - *field_style**
 - *field_sort**
 
-    **see the [next page](./field_overrides.md) for details*
+    **see the **[next page](./field_overrides.md)** for details*
 
 Most of these are self-explanatory, as they mirror the same attributes on an Embed or Page. An important distinction is what values they take -- typically favoring a single string representing the data.
 

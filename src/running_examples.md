@@ -25,9 +25,9 @@ In your command line:
     ```
 
    Replace the `your_private_token_here` text with the token from your
-   [Discord Developers](https://discord.com/developers/applications)
+   **[Discord Developers](https://discord.com/developers/applications)**
    bot page. If you are unsure what to use, please see the
-   [discord.py guide](https://discordpy.readthedocs.io/en/stable/discord.html).
+   **[discord.py guide](https://discordpy.readthedocs.io/en/stable/discord.html)**.
 
 4. Install Poetry and the project dependencies.
 
@@ -36,7 +36,7 @@ In your command line:
     ```
 
    > Please note that this is not the preferred way to install Poetry. Instead,
-   > you should follow the [guide](https://python-poetry.org/docs/#installation) on their site.
+   > you should follow the **[guide](https://python-poetry.org/docs/#installation)** on their site.
    > I highly recommend Poetry as a package manager for Python, so it is not wasted
    > effort to download and learn properly.
 
@@ -46,4 +46,4 @@ In your command line:
     poetry run examples
     ```
 
-At this point, the bot should be up and running. All the cogs are loaded automatically thanks to [cogwatch]('https://github.com/robertwayne/cogwatch), so you can add the bot to your server and start using commands. The next page will list all the available commands and what they do.
+At this point, the bot should be up and running. All the cogs are loaded automatically thanks to **[cogwatch]('https://github.com/robertwayne/cogwatch)**, so you can add the bot to your server and start using commands. The next page will list all the available commands and what they do.
