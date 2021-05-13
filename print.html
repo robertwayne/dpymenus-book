@@ -342,7 +342,8 @@ All of these methods return themselves, so they can be chained.</p>
 <pre><code class="language-python">from dpymenus import PaginatedMenu, Template
 
 template = Template(...)
-menu = PaginatedMenu(ctx, template=template)
+menu = PaginatedMenu(ctx)
+menu.add_pages([...], template=template)
 </code></pre>
 <p>We want to import the <code>Template</code> class, which is exposed in the base dpymenus namescape. We can then build create a new Template instance as we would with any class.</p>
 <p>The template takes a variety of keyword arguments:</p>
