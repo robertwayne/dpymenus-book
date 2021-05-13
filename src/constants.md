@@ -27,3 +27,5 @@ When overriding this value, make sure you place your buttons in the order they
 will be displayed on the PaginatedMenu:
 
     first_page, back, close, next, last_page
+
+Also, note that PagiantedMenu provides a general method for managing this: `add_buttons([...])`. You should prefer to use this method unless you have multiple menus which should have their default buttons overridden.
