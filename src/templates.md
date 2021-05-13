@@ -12,7 +12,7 @@ menu = PaginatedMenu(ctx)
 menu.add_pages([...], template=template)
 ```
 
-We want to import the `Template` class, which is exposed in the base dpymenus namescape. We can then build create a new Template instance as we would with any class.
+We want to import the `Template` class, which is exposed in the base dpymenus namespace. We can then create a new Template instance.
 
 The template takes a variety of keyword arguments:
 
