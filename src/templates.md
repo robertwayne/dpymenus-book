@@ -8,7 +8,8 @@ Templates are objects you can apply to a menu which applies a style or attribute
 from dpymenus import PaginatedMenu, Template
 
 template = Template(...)
-menu = PaginatedMenu(ctx, template=template)
+menu = PaginatedMenu(ctx)
+menu.add_pages([...], template=template)
 ```
 
 We want to import the `Template` class, which is exposed in the base dpymenus namescape. We can then build create a new Template instance as we would with any class.
