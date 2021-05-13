@@ -172,6 +172,14 @@
                         <h1 id="running-examples"><a class="header" href="#running-examples">Running Examples</a></h1>
 <p><code>dpymenus</code> contains a working example for almost every feature most developers will be using. All the examples run as separate cogs on a bot that you can load up yourself.</p>
 <p>All of these instructions should work on Linux (Ubuntu-flavors) &amp; Windows 10.</p>
+<blockquote>
+<p><strong>Windows Users</strong>
+Windows can be pretty finicky with PATH and Python installations sometimes.
+If you are having issues installing Poetry, ensure that your PATH contains a
+<code>%USERPROFILE%\.poetry\bin\</code> string.</p>
+<p>In addition, you probably want to go into App Execution Aliases and turn off any
+options relating to Python and install Python from <a href="https://python.org">python.org</a>.</p>
+</blockquote>
 <p>In your command line <em>(PowerShell if you are on Windows)</em>:</p>
 <ol>
 <li>
@@ -188,6 +196,12 @@
 <p>We need to create a <code>.env</code> file and add a token to it.</p>
 <pre><code class="language-shell">echo &quot;BOT_TOKEN=your_private_token_here&quot; &gt; .env
 </code></pre>
+<blockquote>
+<p><strong>Windows Users</strong></p>
+<p>Due to the way Windows creates new files, the simplest solution is to just
+create a .env in VSCode or your IDE of choice. Using the above will cause you
+to receive an encoding error, as the file will not be in UTF-8.</p>
+</blockquote>
 <p>Replace the <code>your_private_token_here</code> text with the token from your
 <strong><a href="https://discord.com/developers/applications">Discord Developers</a></strong>
 bot page. If you are unsure what to use, please see the
