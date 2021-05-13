@@ -4,6 +4,14 @@
 
 All of these instructions should work on Linux (Ubuntu-flavors) & Windows 10.
 
+> **Windows Users**
+> Windows can be pretty finicky with PATH and Python installations sometimes.
+> If you are having issues installing Poetry, ensure that your PATH contains a
+> `%USERPROFILE%\.poetry\bin\` string.
+>
+> In addition, you probably want to go into App Execution Aliases and turn off any
+> options relating to Python and install Python from [python.org](https://python.org).
+
 In your command line *(PowerShell if you are on Windows)*:
 
 1. Clone the repository.
@@ -23,6 +31,12 @@ In your command line *(PowerShell if you are on Windows)*:
     ```shell
     echo "BOT_TOKEN=your_private_token_here" > .env
     ```
+
+   > **Windows Users**
+   >
+   > Due to the way Windows creates new files, the simplest solution is to just
+   > create a .env in VSCode or your IDE of choice. Using the above will cause you
+   > to receive an encoding error, as the file will not be in UTF-8.
 
    Replace the `your_private_token_here` text with the token from your
    **[Discord Developers](https://discord.com/developers/applications)**
