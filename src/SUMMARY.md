@@ -17,11 +17,7 @@
 - [Configuring Your Menu](./local_configuration.md)
 - [Templates](./templates.md)
   - [Field Overrides](./field_overrides.md)
-
-# Pages
-
 - [Creating Pages](./pages.md)
-- [Defining Callback Events](./callbacks.md)
 
 # Configuration
 
