@@ -6,7 +6,6 @@
 
 - [Installation](./installation.md)
 - [Running Examples](./running_examples.md)
-- [Migrating from v1](./migrating.md)
 
 # Building Menus
 
