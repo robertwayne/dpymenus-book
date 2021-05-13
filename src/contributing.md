@@ -40,6 +40,12 @@ you have Poetry installed via the **[official installation instructions](https:/
     echo "BOT_TOKEN=your_private_token_here" > .env
     ```
 
+   > **Windows Users**
+   >
+   > Due to the way Windows creates new files, the simplest solution is to just
+   > create a .env in VSCode or your IDE of choice. Using the above will cause you
+   > to receive an encoding error, as the file will not be in UTF-8.
+
    *Note: Replace the `your_private_token_here` text with the token from your
    **[Discord Developers](https://discord.com/developers/applications)**
    bot page. If you are unsure what to use, please see the
