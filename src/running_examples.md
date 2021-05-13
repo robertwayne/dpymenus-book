@@ -1,33 +1,37 @@
 # Running Examples
 
-`dpymenus` contains a working example for almost every feature most developers will be using. All the examples run as
-separate cogs on a bot that you can load up yourself.
+`dpymenus` contains a working example for almost every feature most developers will be using. All the examples run as separate cogs on a bot that you can load up yourself.
 
 All of these instructions should work on Linux (Ubuntu-flavors) & Windows 10.
 
 In your command line:
 
 1. Clone the repository.
-    ```
+
+    ```shell
     git clone https:github.com/robertwayne/dpymenus
     ```
 
 2. Move into the directory you just cloned.
-    ```
+
+    ```shell
     cd dpymenus
     ```
 
 3. We need to create a `.env` file and add a token to it.
-    ```
+
+    ```shell
     echo "BOT_TOKEN=your_private_token_here" > .env
     ```
+
    Replace the `your_private_token_here` text with the token from your
    [Discord Developers](https://discord.com/developers/applications)
    bot page. If you are unsure what to use, please see the
    [discord.py guide](https://discordpy.readthedocs.io/en/stable/discord.html).
 
 4. Install Poetry and the project dependencies.
-    ```
+
+    ```shell
     pip -m install poetry && poetry install
     ```
 
@@ -37,10 +41,9 @@ In your command line:
    > effort to download and learn properly.
 
 5. Run the bot!
-    ```
+
+    ```shell
     poetry run examples
     ```
 
-At this point, the bot should be up and running. All the cogs are loaded automatically thanks
-to [cogwatch]('https://github.com/robertwayne/cogwatch), so you can add the bot to your server and start using commands.
-The next page will list all the available commands and what they do.
+At this point, the bot should be up and running. All the cogs are loaded automatically thanks to [cogwatch]('https://github.com/robertwayne/cogwatch), so you can add the bot to your server and start using commands. The next page will list all the available commands and what they do.

@@ -5,7 +5,7 @@ the Discord API *(button-based menus have inherent overhead because of this)*.
 
 Let's look at the official `text_menu_example.py`.
 
-### Imports
+## Imports
 
 ```python
 from dpymenus import Page, TextMenu
@@ -16,7 +16,7 @@ We always want to import the `Page` class, as it is an enhanced form of the `Emb
 type of menu we are creating. We will also make use of some constants provided by the library to make validating input
 easier. You'll read more on that later.
 
-### Cog Core
+## Cog Core
 
 ```python
 class MyTextMenu(commands.Cog):
@@ -32,7 +32,7 @@ The 'core' of a cog, or a `discord.py` command file, generally looks like this. 
 class, and we always supply a `setup` function, which adds the cog to your bot instance. Inside the core, we will be
 able to add our command and relevant menu code.
 
-### Command
+## Command
 
 ```python
 @commands.command()
@@ -58,7 +58,7 @@ callback. We will look at the specific callback, `self.confirm`, in a moment.
 
 You'll notice `page2` does not have an `on_next`. This signifies the end of a menu, or the last page.
 
-### Menu Breakdown
+## Menu Breakdown
 
 ```python
 menu = TextMenu(ctx)
@@ -95,7 +95,7 @@ This method should be the final thing you call on your menu. It will start the m
 pre-validation steps, creating a user-menu session, and starting the main menu loop. At this point, your menu will be
 intractable in Discord.
 
-### Callback Breakdown
+## Callback Breakdown
 
 ```python
 @staticmethod

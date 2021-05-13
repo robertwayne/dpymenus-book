@@ -13,13 +13,13 @@ the language, but it's a critical step.
 
 Last, run this in your command-line:
 
-```
+```shell
 pip install dpymenus
 ```
 
 If you use Poetry
 
-```
+```shell
 poetry add dpymenus
 ```
 
@@ -27,11 +27,11 @@ poetry add dpymenus
 
 If you are interested in using the development branch, you can run:
 
-```
+```shell
 pip install git+https://github.com/robertwayne/dpymenus.git@next
 ```
 
-```
+```shell
 poetry add git+https://github.com/robertwayne/dpymenus.git#next
 ```
 

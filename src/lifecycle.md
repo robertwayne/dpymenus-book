@@ -1,13 +1,10 @@
 # Lifecycle
 
-Menus consist of three basic stages: open, update, and close. Most of the time is spent in the update stage, which 
-processes user input, handles transitions, and manages any state data. In general, you don't really need to know 
-anything about menu state management unless you are using hooks *(in the next chapter)* or overriding the `BaseMenu` 
-class. 
+Menus consist of three basic stages: open, update, and close. Most of the time is spent in the update stage, which processes user input, handles transitions, and manages any state data. In general, you don't really need to know anything about menu state management unless you are using hooks *(in the next chapter)* or overriding the `BaseMenu` class.
 
 This page can be used as a reference for the menu lifecycle.
 
-### Open
+## Open
 
 When a menu is opened, it will always execute these steps first:
 
@@ -22,7 +19,7 @@ When a menu is opened, it will always execute these steps first:
 9. Executes any post-open hooks
 10. Executes any pre-update hooks
 
-### Update
+## Update
 
 An update cycle is performed on every iteration of a menu, whether a page change is executed or not. The steps vary per
 menu, but generally look as follows:
@@ -33,7 +30,7 @@ menu, but generally look as follows:
 4. Execute any post-update hooks
 5. Execute transition method (whether it's next, close, or wait)
 
-### Close
+## Close
 
 When a menu is closed, it goes through the following steps:
 

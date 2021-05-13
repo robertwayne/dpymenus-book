@@ -3,7 +3,7 @@
 `dpymenus` is an unofficial extension for the `discord.py` library that aims to help developers build dynamic menus for
 their bots easily.
 
-### Features
+## Features
 
 - Handles text & button inputs
 - Easy-to-build menus with paginated data, multiple choices, and polls
