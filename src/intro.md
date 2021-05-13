@@ -17,5 +17,7 @@ runnable examples, so you can see every feature!
 ## Links
 
 **[API Documentation](https://dpymenus.readthedocs.io/en/latest/)**
+
 **[GitHub Repository](https://github.com/robertwayne/dpymenus)**
+
 **[PyPi](https://pypi.org/project/dpymenus/)**
