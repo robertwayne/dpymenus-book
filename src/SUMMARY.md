@@ -27,7 +27,7 @@
 # Advanced Features
 
 - [Passing Dynamic Data](./dynamic_data.md)
-- [Sessions]()
+- [Sessions](./sessions.md)
 - [Lifecycle](./lifecycle.md)
   - [Hooks](./hooks.md)
 
