@@ -170,6 +170,55 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="templates"><a class="header" href="#templates">Templates</a></h1>
+<p>Templates are objects you can apply to a menu which applies a style or attribute across all pages. Some examples include color, footers, and fields.</p>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<pre><code class="language-python">from dpymenus import PaginatedMenu, Template
+
+template = Template(...)
+menu = PaginatedMenu(ctx, template=template)
+</code></pre>
+<p>We want to import the <code>Template</code> class, which is exposed in the base dpymenus namescape. We can then build create a new Template instance as we would with any class.</p>
+<p>The template takes a variety of keyword arguments:</p>
+<ul>
+<li>
+<p>title: <em>string</em></p>
+</li>
+<li>
+<p>description: <em>string</em></p>
+</li>
+<li>
+<p>color: <em>string</em></p>
+</li>
+<li>
+<p>footer: <em>dictionary</em> -&gt; { text: <em>string</em>, icon_url: <em>string</em> }</p>
+</li>
+<li>
+<p>image: <em>string</em></p>
+</li>
+<li>
+<p>url: <em>string</em></p>
+</li>
+<li>
+<p>thumbnail: <em>string</em></p>
+</li>
+<li>
+<p>author: <em>dictionary</em> -&gt; { name: string, url: string, icon_url: string }</p>
+</li>
+<li>
+<p>fields: <em>list</em> -&gt; <em>dictionary</em> -&gt; { name: <em>string</em>, value: <em>string</em>, inline: <em>boolean</em> }</p>
+</li>
+<li>
+<p><em>field_style</em>*</p>
+</li>
+<li>
+<p><em>field_sort</em>*</p>
+<p>*<em>see the <a href="./field_overrides.html">next page</a> for details</em></p>
+</li>
+</ul>
+<p>Most of these are self-explanatory, as they mirror the same attributes on an Embed or Page. An important distinction is what values they take -- typically favoring a single string representing the data.</p>
+<h2 id="footer-author--fields"><a class="header" href="#footer-author--fields">Footer, Author, &amp; Fields</a></h2>
+<p>The Footer and Author arguments take a dictionary containing the same keys one would normally use when adding these to an Embed or Page.</p>
+<p>Fields are a bit different, as you generally create them by calling a separate <code>.add_field()</code> function every time. In this case, you pass a list as the argument containing a dictionary for each field. The dictionary, again, contains the same values used when creating them on a standard Embed or Page.</p>
 
                     </main>
 

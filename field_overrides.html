@@ -170,6 +170,24 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="field-overrides"><a class="header" href="#field-overrides">Field Overrides</a></h1>
+<p>When adding fields in with a template, you might want to control how they are displayed in relation to existing fields on your Embeds or Pages. In this case, we can use field overrides.</p>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<pre><code class="language-python">from dpymenus import Template, FieldStyle, FieldSort
+
+template = Template(..., 
+        field_style=FieldStyle.COMBINE, 
+        field_sort=FieldSort.LAST
+    )
+</code></pre>
+<p>Both of the override options are enumerated values.</p>
+<h2 id="field-styles"><a class="header" href="#field-styles">Field Styles</a></h2>
+<p><strong>IGNORE</strong>: templated fields will NOT be added if there is an existing field <em>(default)</em></p>
+<p><strong>COMBINE</strong>: templated fields will be added if there is an existing field or not</p>
+<p><strong>OVERRIDE</strong>: templated fields will overwrite existing fields</p>
+<h2 id="field-sorts"><a class="header" href="#field-sorts">Field Sorts</a></h2>
+<p>Sorting only takes effect when using the <code>FieldStyle.COMBINE</code> on your template, as this determines how the fields will actually be combined.</p>
+<p><strong>FIRST</strong>: templated fields will be displayed before existing fields</p>
+<p><strong>LAST</strong>:  templated fields will be displayed after existing fields <em>(default)</em></p>
 
                     </main>
 

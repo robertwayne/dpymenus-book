@@ -172,22 +172,23 @@
                         <h1 id="using-pyprojecttoml-to-configure-menus"><a class="header" href="#using-pyprojecttoml-to-configure-menus">Using pyproject.toml to Configure Menus</a></h1>
 <p>General global settings within the library can be configured with a <code>pyproject.toml</code> file in your root directory.</p>
 <p>Everything should be listed under a <code>[dpymenus]</code> header.</p>
-<h3 id="general"><a class="header" href="#general">General</a></h3>
+<h2 id="general"><a class="header" href="#general">General</a></h2>
 <table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody>
 <tr><td>history-cache-limit</td><td>int</td><td>10</td><td>Limit on the history cache. 0 disables.</td></tr>
 <tr><td>hide-warnings</td><td>bool</td><td>False</td><td>Shows/hides library warnings in the console.</td></tr>
-<tr><td>reply-as-default</td><td>bool</td><td>True</td><td>Enables/disables the Discord reply feature.</td></tr>
-<tr><td>button-delay</td><td>float</td><td>0.35</td><td>Delay between adding buttons to a page.</td></tr>
+<tr><td>reply-as-default</td><td>bool</td><td>False</td><td>Enables/disables the Discord reply feature.</td></tr>
+<tr><td>button-delay</td><td>float</td><td>0.35</td><td>Delay, in milliseconds, between adding buttons to a page.</td></tr>
+<tr><td>timeout</td><td>int</td><td>120</td><td>Duration, in seconds, before a menu is timed out and closed.</td></tr>
 </tbody></table>
-<h3 id="sessions"><a class="header" href="#sessions">Sessions</a></h3>
+<h2 id="sessions"><a class="header" href="#sessions">Sessions</a></h2>
 <table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody>
 <tr><td>allow-session-restore</td><td>bool</td><td>False</td><td>Enables/disabled the session restore feature.</td></tr>
 <tr><td>sessions-per-channel</td><td>int</td><td>1</td><td>Limits sessions per channel.</td></tr>
 <tr><td>sessions-per-guild</td><td>int</td><td>3</td><td>Limits sessions per guild.</td></tr>
 <tr><td>sessions-per-user</td><td>int</td><td>10</td><td>Limits sessions per user.</td></tr>
-<tr><td>session-timeout</td><td>int</td><td>3600</td><td>Time before sessions are removed from the store.</td></tr>
+<tr><td>session-timeout</td><td>int</td><td>3600</td><td>Duration, in seconds, before sessions are removed from the store.</td></tr>
 </tbody></table>
-<h3 id="constants"><a class="header" href="#constants">Constants</a></h3>
+<h2 id="constants"><a class="header" href="#constants">Constants</a></h2>
 <table><thead><tr><th>Variable</th><th>Type</th><th>Default</th></tr></thead><tbody>
 <tr><td>constants-confirm</td><td>List[str]</td><td>['y', 'yes', 'ok', 'k', 'kk', 'ready', 'rdy', 'r', 'confirm', 'okay']</td></tr>
 <tr><td>constants-deny</td><td>List[str]</td><td>['n', 'no', 'deny', 'negative', 'back', 'return']</td></tr>
@@ -195,7 +196,7 @@
 <tr><td>constants-buttons</td><td>List[str]</td><td>['⏮️', '◀️', '⏹️', '▶️', '⏭️']</td></tr>
 </tbody></table>
 <p><em>See the <a href="./constants.html">next page</a> for detailed information on constants.</em></p>
-<h3 id="example-file"><a class="header" href="#example-file">Example File</a></h3>
+<h2 id="example-file"><a class="header" href="#example-file">Example File</a></h2>
 <pre><code class="language-toml">[dpymenus]
 history-cache-limit = 10
 sessions-per-channel = 1
@@ -206,12 +207,11 @@ allow-session-restore = false
 hide-warnings = false
 reply-as-default = false
 button-delay = 0.35
+timeout = 15
 constants-confirm = ['yes', 'y']
 constants-deny = ['no', 'n']
 constants-quit = ['quit', 'q']
 constants-buttons = ['⏮️', '⬅️️', '🛑', '➡️️', '⏭️'] 
-</code></pre>
-<pre><code>[dpymenus]
 </code></pre>
 
                     </main>

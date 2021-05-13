@@ -338,28 +338,96 @@ one, an internal method will run that closes our menu and ends the user-menu ses
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="using-a-poll"><a class="header" href="#using-a-poll">Using a Poll</a></h1>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="configuring-your-menu"><a class="header" href="#configuring-your-menu">Configuring Your Menu</a></h1>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="templates"><a class="header" href="#templates">Templates</a></h1>
+<p>Templates are objects you can apply to a menu which applies a style or attribute across all pages. Some examples include color, footers, and fields.</p>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<pre><code class="language-python">from dpymenus import PaginatedMenu, Template
+
+template = Template(...)
+menu = PaginatedMenu(ctx, template=template)
+</code></pre>
+<p>We want to import the <code>Template</code> class, which is exposed in the base dpymenus namescape. We can then build create a new Template instance as we would with any class.</p>
+<p>The template takes a variety of keyword arguments:</p>
+<ul>
+<li>
+<p>title: <em>string</em></p>
+</li>
+<li>
+<p>description: <em>string</em></p>
+</li>
+<li>
+<p>color: <em>string</em></p>
+</li>
+<li>
+<p>footer: <em>dictionary</em> -&gt; { text: <em>string</em>, icon_url: <em>string</em> }</p>
+</li>
+<li>
+<p>image: <em>string</em></p>
+</li>
+<li>
+<p>url: <em>string</em></p>
+</li>
+<li>
+<p>thumbnail: <em>string</em></p>
+</li>
+<li>
+<p>author: <em>dictionary</em> -&gt; { name: string, url: string, icon_url: string }</p>
+</li>
+<li>
+<p>fields: <em>list</em> -&gt; <em>dictionary</em> -&gt; { name: <em>string</em>, value: <em>string</em>, inline: <em>boolean</em> }</p>
+</li>
+<li>
+<p><em>field_style</em>*</p>
+</li>
+<li>
+<p><em>field_sort</em>*</p>
+<p>*<em>see the <a href="./field_overrides.html">next page</a> for details</em></p>
+</li>
+</ul>
+<p>Most of these are self-explanatory, as they mirror the same attributes on an Embed or Page. An important distinction is what values they take -- typically favoring a single string representing the data.</p>
+<h2 id="footer-author--fields"><a class="header" href="#footer-author--fields">Footer, Author, &amp; Fields</a></h2>
+<p>The Footer and Author arguments take a dictionary containing the same keys one would normally use when adding these to an Embed or Page.</p>
+<p>Fields are a bit different, as you generally create them by calling a separate <code>.add_field()</code> function every time. In this case, you pass a list as the argument containing a dictionary for each field. The dictionary, again, contains the same values used when creating them on a standard Embed or Page.</p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="field-overrides"><a class="header" href="#field-overrides">Field Overrides</a></h1>
+<p>When adding fields in with a template, you might want to control how they are displayed in relation to existing fields on your Embeds or Pages. In this case, we can use field overrides.</p>
+<h2 id="usage-1"><a class="header" href="#usage-1">Usage</a></h2>
+<pre><code class="language-python">from dpymenus import Template, FieldStyle, FieldSort
+
+template = Template(..., 
+        field_style=FieldStyle.COMBINE, 
+        field_sort=FieldSort.LAST
+    )
+</code></pre>
+<p>Both of the override options are enumerated values.</p>
+<h2 id="field-styles"><a class="header" href="#field-styles">Field Styles</a></h2>
+<p><strong>IGNORE</strong>: templated fields will NOT be added if there is an existing field <em>(default)</em></p>
+<p><strong>COMBINE</strong>: templated fields will be added if there is an existing field or not</p>
+<p><strong>OVERRIDE</strong>: templated fields will overwrite existing fields</p>
+<h2 id="field-sorts"><a class="header" href="#field-sorts">Field Sorts</a></h2>
+<p>Sorting only takes effect when using the <code>FieldStyle.COMBINE</code> on your template, as this determines how the fields will actually be combined.</p>
+<p><strong>FIRST</strong>: templated fields will be displayed before existing fields</p>
+<p><strong>LAST</strong>:  templated fields will be displayed after existing fields <em>(default)</em></p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="creating-pages"><a class="header" href="#creating-pages">Creating Pages</a></h1>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="defining-callback-events"><a class="header" href="#defining-callback-events">Defining Callback Events</a></h1>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="using-pyprojecttoml-to-configure-menus"><a class="header" href="#using-pyprojecttoml-to-configure-menus">Using pyproject.toml to Configure Menus</a></h1>
 <p>General global settings within the library can be configured with a <code>pyproject.toml</code> file in your root directory.</p>
 <p>Everything should be listed under a <code>[dpymenus]</code> header.</p>
-<h3 id="general"><a class="header" href="#general">General</a></h3>
+<h2 id="general"><a class="header" href="#general">General</a></h2>
 <table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody>
 <tr><td>history-cache-limit</td><td>int</td><td>10</td><td>Limit on the history cache. 0 disables.</td></tr>
 <tr><td>hide-warnings</td><td>bool</td><td>False</td><td>Shows/hides library warnings in the console.</td></tr>
-<tr><td>reply-as-default</td><td>bool</td><td>True</td><td>Enables/disables the Discord reply feature.</td></tr>
-<tr><td>button-delay</td><td>float</td><td>0.35</td><td>Delay between adding buttons to a page.</td></tr>
+<tr><td>reply-as-default</td><td>bool</td><td>False</td><td>Enables/disables the Discord reply feature.</td></tr>
+<tr><td>button-delay</td><td>float</td><td>0.35</td><td>Delay, in milliseconds, between adding buttons to a page.</td></tr>
+<tr><td>timeout</td><td>int</td><td>120</td><td>Duration, in seconds, before a menu is timed out and closed.</td></tr>
 </tbody></table>
-<h3 id="sessions"><a class="header" href="#sessions">Sessions</a></h3>
+<h2 id="sessions"><a class="header" href="#sessions">Sessions</a></h2>
 <table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody>
 <tr><td>allow-session-restore</td><td>bool</td><td>False</td><td>Enables/disabled the session restore feature.</td></tr>
 <tr><td>sessions-per-channel</td><td>int</td><td>1</td><td>Limits sessions per channel.</td></tr>
 <tr><td>sessions-per-guild</td><td>int</td><td>3</td><td>Limits sessions per guild.</td></tr>
 <tr><td>sessions-per-user</td><td>int</td><td>10</td><td>Limits sessions per user.</td></tr>
-<tr><td>session-timeout</td><td>int</td><td>3600</td><td>Time before sessions are removed from the store.</td></tr>
+<tr><td>session-timeout</td><td>int</td><td>3600</td><td>Duration, in seconds, before sessions are removed from the store.</td></tr>
 </tbody></table>
-<h3 id="constants"><a class="header" href="#constants">Constants</a></h3>
+<h2 id="constants"><a class="header" href="#constants">Constants</a></h2>
 <table><thead><tr><th>Variable</th><th>Type</th><th>Default</th></tr></thead><tbody>
 <tr><td>constants-confirm</td><td>List[str]</td><td>['y', 'yes', 'ok', 'k', 'kk', 'ready', 'rdy', 'r', 'confirm', 'okay']</td></tr>
 <tr><td>constants-deny</td><td>List[str]</td><td>['n', 'no', 'deny', 'negative', 'back', 'return']</td></tr>
@@ -367,7 +435,7 @@ one, an internal method will run that closes our menu and ends the user-menu ses
 <tr><td>constants-buttons</td><td>List[str]</td><td>['⏮️', '◀️', '⏹️', '▶️', '⏭️']</td></tr>
 </tbody></table>
 <p><em>See the <a href="./constants.html">next page</a> for detailed information on constants.</em></p>
-<h3 id="example-file"><a class="header" href="#example-file">Example File</a></h3>
+<h2 id="example-file"><a class="header" href="#example-file">Example File</a></h2>
 <pre><code class="language-toml">[dpymenus]
 history-cache-limit = 10
 sessions-per-channel = 1
@@ -378,12 +446,11 @@ allow-session-restore = false
 hide-warnings = false
 reply-as-default = false
 button-delay = 0.35
+timeout = 15
 constants-confirm = ['yes', 'y']
 constants-deny = ['no', 'n']
 constants-quit = ['quit', 'q']
 constants-buttons = ['⏮️', '⬅️️', '🛑', '➡️️', '⏭️'] 
-</code></pre>
-<pre><code>[dpymenus]
 </code></pre>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="constant-variables"><a class="header" href="#constant-variables">Constant Variables</a></h1>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="passing-dynamic-data-between-pages"><a class="header" href="#passing-dynamic-data-between-pages">Passing Dynamic Data Between Pages</a></h1>
@@ -477,16 +544,16 @@ you have Poetry installed via the <a href="https://python-poetry.org/docs/#insta
 <ol>
 <li>
 <p>Clone the repository and checkout the <code>next</code> branch:</p>
-<pre><code>git clone https://github.com/robertwayne/dpymenus
+<pre><code class="language-shell">git clone https://github.com/robertwayne/dpymenus
 </code></pre>
-<pre><code>cd dpymenus
+<pre><code class="language-shell">cd dpymenus
 </code></pre>
-<pre><code>git checkout next
+<pre><code class="language-shell">git checkout next
 </code></pre>
 </li>
 <li>
 <p>(Optional) Set up the example runner, so you can test your changes live. Create a <code>.env</code> file:</p>
-<pre><code>echo &quot;BOT_TOKEN=your_private_token_here&quot; &gt; .env
+<pre><code class="language-shell">echo &quot;BOT_TOKEN=your_private_token_here&quot; &gt; .env
 </code></pre>
 <p><em>Note: Replace the <code>your_private_token_here</code> text with the token from your
 <a href="https://discord.com/developers/applications">Discord Developers</a>
@@ -495,12 +562,12 @@ bot page. If you are unsure what to use, please see the
 </li>
 <li>
 <p>Install the dependencies:</p>
-<pre><code>poetry install
+<pre><code class="language-shell">poetry install
 </code></pre>
 </li>
 <li>
 <p>(Optional) Test that the runner is working with:</p>
-<pre><code>poetry run examples
+<pre><code class="language-shell">poetry run examples
 </code></pre>
 <p>If the bot starts, and you can run commands in whatever server you have added the bot to, you are ready to go!</p>
 </li>
