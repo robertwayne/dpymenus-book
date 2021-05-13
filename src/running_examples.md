@@ -4,7 +4,7 @@
 
 All of these instructions should work on Linux (Ubuntu-flavors) & Windows 10.
 
-In your command line:
+In your command line *(PowerShell if you are on Windows)*:
 
 1. Clone the repository.
 
