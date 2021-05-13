@@ -5,6 +5,7 @@
 All of these instructions should work on Linux (Ubuntu-flavors) & Windows 10.
 
 > **Windows Users**
+>
 > Windows can be pretty finicky with PATH and Python installations sometimes.
 > If you are having issues installing Poetry, ensure that your PATH contains a
 > `%USERPROFILE%\.poetry\bin\` string.
@@ -60,4 +61,4 @@ In your command line *(PowerShell if you are on Windows)*:
     poetry run examples
     ```
 
-At this point, the bot should be up and running. All the cogs are loaded automatically thanks to **[cogwatch]('https://github.com/robertwayne/cogwatch)**, so you can add the bot to your server and start using commands. The next page will list all the available commands and what they do.
+At this point, the bot should be up and running. All the cogs are loaded automatically thanks to **[cogwatch]('https://github.com/robertwayne/cogwatch)**, so you can add the bot to your server and start using commands.
