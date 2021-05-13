@@ -2,13 +2,13 @@
 
 [Introduction](./intro.md)
 
-## Getting Started
+# Getting Started
 
 - [Installation](./installation.md)
 - [Running Examples](./running_examples.md)
 - [Migrating from v1](./migrating.md)
 
-## Building Menus
+# Building Menus
 
 - [Text-Based Menus](./text_menus.md)
 - [Button-Based Menus](./button_menus.md)
@@ -19,17 +19,17 @@
 - [Templates](./templates.md)
   - [Field Overrides](./field_overrides.md)
 
-## Pages
+# Pages
 
 - [Creating Pages](./pages.md)
 - [Defining Callback Events](./callbacks.md)
 
-## Configuration
+# Configuration
 
 - [Using pyproject.toml](./global_configuration.md)
 - [Constant Variables](./constants.md)
 
-## Advanced Features
+# Advanced Features
 
 - [Passing Dynamic Data](./dynamic_data.md)
 - [Sessions](./sessions.md)
