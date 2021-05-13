@@ -17,7 +17,7 @@ Last, run this in your command-line:
 pip install dpymenus
 ```
 
-If you use Poetry
+If you use Poetry:
 
 ```shell
 poetry add dpymenus
