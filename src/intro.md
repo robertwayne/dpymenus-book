@@ -13,3 +13,9 @@ their bots easily.
 
 This book will provide complete coverage of the libraries functions, how to use them, and exists alongside a full set of
 runnable examples, so you can see every feature!
+
+## Links
+
+**[API Documentation](https://dpymenus.readthedocs.io/en/latest/)**
+**[GitHub Repository](https://github.com/robertwayne/dpymenus)**
+**[PyPi](https://pypi.org/project/dpymenus/)**
