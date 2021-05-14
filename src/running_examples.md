@@ -18,7 +18,7 @@ In your command line *(PowerShell if you are on Windows)*:
 1. Clone the repository.
 
     ```shell
-    git clone https:github.com/robertwayne/dpymenus
+    git clone https://github.com/robertwayne/dpymenus
     ```
 
 2. Move into the directory you just cloned.
