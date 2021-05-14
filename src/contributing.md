@@ -37,7 +37,7 @@ you have Poetry installed via the **[official installation instructions](https:/
 2. (Optional) Set up the example runner, so you can test your changes live. Create a `.env` file:
 
     ```shell
-    echo "BOT_TOKEN=your_private_token_here" > .env
+    echo "DPYMENUS_BOT_TOKEN=your_private_token_here" > .env
     ```
 
    > **Windows Users**
