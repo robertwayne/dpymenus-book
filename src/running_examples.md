@@ -30,7 +30,7 @@ In your command line *(PowerShell if you are on Windows)*:
 3. We need to create a `.env` file and add a token to it.
 
     ```shell
-    echo "BOT_TOKEN=your_private_token_here" > .env
+    echo "DPYMENUS_BOT_TOKEN=your_private_token_here" > .env
     ```
 
    > **Windows Users**
