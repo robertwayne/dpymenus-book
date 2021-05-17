@@ -1,7 +1,6 @@
 # Text-Based Menus
 
-Text-based menus are useful when you need a way to parse user text, or just as a means to limit your requests against
-the Discord API *(button-based menus have inherent overhead because of this)*.
+Text-based menus are useful when you need a way to parse user text, or just as a means to limit your requests against the Discord API *(button-based menus have inherent overhead because of this)*.
 
 Let's look at the official `text_menu_example.py`.
 
