@@ -12,7 +12,7 @@ their bots easily.
 - Awesome examples and documentation to get rolling quickly
 
 This book will provide complete coverage of the libraries functions, how to use them, and exists alongside a full set of
-runnable examples, so you can see every feature!
+runnable examples, so you can see every feature! API Documentation *(see below)* exists as a reference to the public API.
 
 ## Links
 
