@@ -175,14 +175,14 @@
 <h2 id="open"><a class="header" href="#open">Open</a></h2>
 <p>When a menu is opened, it will always execute these steps first:</p>
 <ol>
-<li>Attempt to create or acquire (if enabled) a user session</li>
+<li>Attempt to create or acquire <em>(if enabled)</em> a user session</li>
 <li>Initialize the history and starting page</li>
 <li>Execute any open hooks</li>
-<li>Send the initial message (and initializes the <code>output</code> attribute)</li>
+<li>Send the initial message <em>(and initializes the <code>output</code> attribute)</em></li>
 <li>Sets the <code>input</code> attribute</li>
 <li>Updates the history</li>
 <li>Deletes the input message</li>
-<li>(Optional) Executes specific menu methods</li>
+<li><em>(Optional)</em> Executes specific menu methods</li>
 <li>Executes any post-open hooks</li>
 <li>Executes any pre-update hooks</li>
 </ol>
@@ -194,7 +194,7 @@ menu, but generally look as follows:</p>
 <li>Assign input to a variable</li>
 <li>Execute methods based on input checks</li>
 <li>Execute any post-update hooks</li>
-<li>Execute transition method (whether it's next, close, or wait)</li>
+<li>Execute transition method <em>(whether it's next, close, or wait)</em></li>
 </ol>
 <h2 id="close"><a class="header" href="#close">Close</a></h2>
 <p>When a menu is closed, it goes through the following steps:</p>

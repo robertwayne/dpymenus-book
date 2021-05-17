@@ -183,7 +183,7 @@ their bots easily.</p>
 <li>Awesome examples and documentation to get rolling quickly</li>
 </ul>
 <p>This book will provide complete coverage of the libraries functions, how to use them, and exists alongside a full set of
-runnable examples, so you can see every feature!</p>
+runnable examples, so you can see every feature! API Documentation <em>(see below)</em> exists as a reference to the public API.</p>
 <h2 id="links"><a class="header" href="#links">Links</a></h2>
 <p><strong><a href="https://dpymenus.readthedocs.io/en/latest/">API Documentation</a></strong></p>
 <p><strong><a href="https://github.com/robertwayne/dpymenus">GitHub Repository</a></strong></p>
@@ -269,8 +269,7 @@ effort to download and learn properly.</p>
 </ol>
 <p>At this point, the bot should be up and running. All the cogs are loaded automatically thanks to <strong><a href="&#x27;https://github.com/robertwayne/cogwatch">cogwatch</a></strong>, so you can add the bot to your server and start using commands.</p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="text-based-menus"><a class="header" href="#text-based-menus">Text-Based Menus</a></h1>
-<p>Text-based menus are useful when you need a way to parse user text, or just as a means to limit your requests against
-the Discord API <em>(button-based menus have inherent overhead because of this)</em>.</p>
+<p>Text-based menus are useful when you need a way to parse user text, or just as a means to limit your requests against the Discord API <em>(button-based menus have inherent overhead because of this)</em>.</p>
 <p>Let's look at the official <code>text_menu_example.py</code>.</p>
 <h2 id="imports"><a class="header" href="#imports">Imports</a></h2>
 <pre><code class="language-python">from dpymenus import Page, TextMenu
@@ -427,8 +426,8 @@ template = Template(...,
 <p>A callback in our case is a reference to a function that you define, which is passed into the <code>.on_next()</code> method. It is important that you only pass a reference in, which means exclude the parenthesis.</p>
 <p>If you added the parenthesis, it would call the function immediately instead of deferring it for later when the menu executes its next functions.</p>
 <p>See the <strong><a href="https://dpymenus.readthedocs.io/en/latest/">API Docs</a></strong> for specific callback functions available on each page.</p>
-<h2 id="sending-page-instances"><a class="header" href="#sending-page-instances">Sending Page Instances</a></h2>
-<p>If you are using pages in complex or non-standard ways, you should always call the <code>.as_safe_embed()</code> method on the instance before sending it via a Discord message.</p>
+<h2 id="sending-pages-in-a-message"><a class="header" href="#sending-pages-in-a-message">Sending Pages in a Message</a></h2>
+<p>If you are using pages in complex or non-standard ways, you should always call the <code>.as_safe_embed()</code> method on the instance before sending it via a Discord message. This method ensures it is stripped of any Page-specific attributes, which would otherwise raise an error.</p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="using-pyprojecttoml-to-configure-menus"><a class="header" href="#using-pyprojecttoml-to-configure-menus">Using pyproject.toml to Configure Menus</a></h1>
 <p>General global settings within the library can be configured with a <code>pyproject.toml</code> file in your root directory.</p>
 <p>Everything should be listed under a <code>[dpymenus]</code> header.</p>
@@ -524,14 +523,14 @@ settings.</p>
 <h2 id="open"><a class="header" href="#open">Open</a></h2>
 <p>When a menu is opened, it will always execute these steps first:</p>
 <ol>
-<li>Attempt to create or acquire (if enabled) a user session</li>
+<li>Attempt to create or acquire <em>(if enabled)</em> a user session</li>
 <li>Initialize the history and starting page</li>
 <li>Execute any open hooks</li>
-<li>Send the initial message (and initializes the <code>output</code> attribute)</li>
+<li>Send the initial message <em>(and initializes the <code>output</code> attribute)</em></li>
 <li>Sets the <code>input</code> attribute</li>
 <li>Updates the history</li>
 <li>Deletes the input message</li>
-<li>(Optional) Executes specific menu methods</li>
+<li><em>(Optional)</em> Executes specific menu methods</li>
 <li>Executes any post-open hooks</li>
 <li>Executes any pre-update hooks</li>
 </ol>
@@ -543,7 +542,7 @@ menu, but generally look as follows:</p>
 <li>Assign input to a variable</li>
 <li>Execute methods based on input checks</li>
 <li>Execute any post-update hooks</li>
-<li>Execute transition method (whether it's next, close, or wait)</li>
+<li>Execute transition method <em>(whether it's next, close, or wait)</em></li>
 </ol>
 <h2 id="close"><a class="header" href="#close">Close</a></h2>
 <p>When a menu is closed, it goes through the following steps:</p>

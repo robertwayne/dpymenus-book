@@ -176,8 +176,8 @@
 <p>A callback in our case is a reference to a function that you define, which is passed into the <code>.on_next()</code> method. It is important that you only pass a reference in, which means exclude the parenthesis.</p>
 <p>If you added the parenthesis, it would call the function immediately instead of deferring it for later when the menu executes its next functions.</p>
 <p>See the <strong><a href="https://dpymenus.readthedocs.io/en/latest/">API Docs</a></strong> for specific callback functions available on each page.</p>
-<h2 id="sending-page-instances"><a class="header" href="#sending-page-instances">Sending Page Instances</a></h2>
-<p>If you are using pages in complex or non-standard ways, you should always call the <code>.as_safe_embed()</code> method on the instance before sending it via a Discord message.</p>
+<h2 id="sending-pages-in-a-message"><a class="header" href="#sending-pages-in-a-message">Sending Pages in a Message</a></h2>
+<p>If you are using pages in complex or non-standard ways, you should always call the <code>.as_safe_embed()</code> method on the instance before sending it via a Discord message. This method ensures it is stripped of any Page-specific attributes, which would otherwise raise an error.</p>
 
                     </main>
 
