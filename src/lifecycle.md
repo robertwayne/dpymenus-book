@@ -8,14 +8,14 @@ This page can be used as a reference for the menu lifecycle.
 
 When a menu is opened, it will always execute these steps first:
 
-1. Attempt to create or acquire (if enabled) a user session
+1. Attempt to create or acquire *(if enabled)* a user session
 2. Initialize the history and starting page
 3. Execute any open hooks
-4. Send the initial message (and initializes the `output` attribute)
+4. Send the initial message *(and initializes the `output` attribute)*
 5. Sets the `input` attribute
 6. Updates the history
 7. Deletes the input message
-8. (Optional) Executes specific menu methods
+8. *(Optional)* Executes specific menu methods
 9. Executes any post-open hooks
 10. Executes any pre-update hooks
 
@@ -28,7 +28,7 @@ menu, but generally look as follows:
 2. Assign input to a variable
 3. Execute methods based on input checks
 4. Execute any post-update hooks
-5. Execute transition method (whether it's next, close, or wait)
+5. Execute transition method *(whether it's next, close, or wait)*
 
 ## Close
 
