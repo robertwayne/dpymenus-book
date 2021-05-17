@@ -12,6 +12,6 @@ If you added the parenthesis, it would call the function immediately instead of 
 
 See the **[API Docs](https://dpymenus.readthedocs.io/en/latest/)** for specific callback functions available on each page.
 
-## Sending Page Instances
+## Sending Pages in a Message
 
-If you are using pages in complex or non-standard ways, you should always call the `.as_safe_embed()` method on the instance before sending it via a Discord message.
+If you are using pages in complex or non-standard ways, you should always call the `.as_safe_embed()` method on the instance before sending it via a Discord message. This method ensures it is stripped of any Page-specific attributes, which would otherwise raise an error.
